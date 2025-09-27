@@ -11,7 +11,7 @@ import SwiftUI
 struct Snail_Maze_like2App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MazeView()
         }
     }
 }

@@ -24,7 +24,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9FE56F6D2E814D17008C4574 /* Snail Maze like2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Snail Maze like2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FE56F6D2E814D17008C4574 /* Retro Maze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Retro Maze.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE56F7B2E814D1A008C4574 /* Snail Maze like2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Snail Maze like2Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE56F852E814D1A008C4574 /* Snail Maze like2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Snail Maze like2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -85,7 +85,7 @@
 		9FE56F6E2E814D17008C4574 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9FE56F6D2E814D17008C4574 /* Snail Maze like2.app */,
+				9FE56F6D2E814D17008C4574 /* Retro Maze.app */,
 				9FE56F7B2E814D1A008C4574 /* Snail Maze like2Tests.xctest */,
 				9FE56F852E814D1A008C4574 /* Snail Maze like2UITests.xctest */,
 			);
@@ -114,7 +114,7 @@
 			packageProductDependencies = (
 			);
 			productName = "Snail Maze like2";
-			productReference = 9FE56F6D2E814D17008C4574 /* Snail Maze like2.app */;
+			productReference = 9FE56F6D2E814D17008C4574 /* Retro Maze.app */;
 			productType = "com.apple.product-type.application";
 		};
 		9FE56F7A2E814D1A008C4574 /* Snail Maze like2Tests */ = {
@@ -413,7 +413,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "SliceOfDigital.Snail-Maze-like2";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Retro Maze";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
@@ -452,7 +452,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "SliceOfDigital.Snail-Maze-like2";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Retro Maze";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
