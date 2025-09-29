@@ -69,12 +69,15 @@ final class ModernToneEngine: ObservableObject {
     
     init() {
         #if os(iOS)
-        do {
-            try AVAudioSession.sharedInstance().setCategory(.soloAmbient, mode: .default, options: [.mixWithOthers])
-            try AVAudioSession.sharedInstance().setActive(true)
-        } catch { 
-            print("AudioSession error:", error) 
-        }
+                do {
+                    let session = AVAudioSession.sharedInstance()
+                    // Respecte le mode silencieux :
+                    try session.setCategory(.ambient, mode: .default, options: [])
+                    // (ou .soloAmbient si tu ne veux pas mixer avec la musique de l'utilisateur)
+                    try session.setActive(true)
+                } catch {
+                    print("AudioSession error:", error)
+                }
         #endif
         
         // Kick Node
@@ -154,25 +157,26 @@ final class ModernToneEngine: ObservableObject {
         mix.outputVolume = 1.0
         engine.prepare()
         
-        do { 
-            try engine.start() 
-        } catch { 
-            print("Engine start error:", error) 
+        do {
+            try engine.start()
+        } catch {
+            print("Engine start error:", error)
         }
     }
     
     // Public API
     func successJingle() {
-        trigLead(freq: 880, dur: 0.12, vel: 0.35)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.14) { 
-            self.trigLead(freq: 1320, dur: 0.18, vel: 0.35) 
+        // Utiliser des enveloppes plus longues pour éviter la coupure
+        trigLead(freq: 880, dur: 0.25, vel: 0.45)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.16) {
+            self.trigLead(freq: 1320, dur: 0.30, vel: 0.45)
         }
     }
     
     func timeoutBuzz() {
         trigKick(freq: 80)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) { 
-            self.trigKick(freq: 60) 
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.10) {
+            self.trigKick(freq: 60)
         }
     }
     
@@ -185,10 +189,11 @@ final class ModernToneEngine: ObservableObject {
             scheduleUrgLoop(timeLeft: timeLeft)
         } else if should, let t = urgTimer {
             let newInt = stepInterval(for: timeLeft)
-            if abs(t.timeInterval - newInt) > 0.01 { 
+            // Réduire la sensibilité pour éviter les recréations fréquentes de timer
+            if abs(t.timeInterval - newInt) > 0.05 {
                 t.invalidate()
                 urgTimer = nil
-                scheduleUrgLoop(timeLeft: timeLeft) 
+                scheduleUrgLoop(timeLeft: timeLeft)
             }
         } else if !should {
             urgTimer?.invalidate()
@@ -208,23 +213,10 @@ final class ModernToneEngine: ObservableObject {
         }
     }
     
-//    private func stepInterval(for timeLeft: Double) -> Double {
-//        let maxSpan = 120.0
-//        let clamped = min(maxSpan, max(0.0, timeLeft))
-//        let t = 1.0 - (clamped / maxSpan)
-//        let bpmStart = 90.0, bpmMid = 120.0, bpmEnd = 160.0
-//        
-//        let bpm = (t < 0.5)
-//            ? bpmStart + (bpmMid - bpmStart) * (t / 0.5)
-//            : bpmMid + (bpmEnd - bpmMid) * ((t - 0.5) / 0.5)
-//        
-//        return 60.0 / (bpm * 4.0)
-//    }
-    
     private func stepInterval(for timeLeft: Double) -> Double {
         // Tempo calme tant qu'il reste plus de 10s
         var bpm = 100.0
-
+        
         if timeLeft <= 10 {
             // Phase "stress" entre 10s et 3s incluses → de 120 à 150 BPM
             if timeLeft > 3 {
@@ -236,11 +228,11 @@ final class ModernToneEngine: ObservableObject {
                 bpm = 150 + t * (180 - 150)
             }
         }
-
+        
         // Conversion BPM → intervalle (1/16 de note)
         return 60.0 / (bpm * 4.0)
     }
-
+    
     
     private func setIntensity(for timeLeft: Double) {
         let hi = 60.0, lo = 5.0
