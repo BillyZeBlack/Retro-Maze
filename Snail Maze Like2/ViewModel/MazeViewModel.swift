@@ -235,7 +235,8 @@ final class MazeViewModel: ObservableObject {
     private func timeBudgetForCurrentMaze(carry: Double) -> Double {
         let steps = max(0, maze.solve().count - 1)
         let base = Double(steps) * (stepDuration + humanOverhead)
-        return max(5, base + baseBuffer + fixedBonusPerLevel + carry)
+        let premiumBonus = hasPremiumPack ? 15.0 : 0.0
+        return max(5, base + baseBuffer + fixedBonusPerLevel + premiumBonus + carry)
     }
 
     private func recalcAndResetTimerForCurrentMaze(carry: Double) {
@@ -296,8 +297,10 @@ final class MazeViewModel: ObservableObject {
         levelsCompleted += 1
 
         let maxSize = 27
-        let newCols = min(maxSize, maze.cols + 2)
-        let newRows = min(maxSize, maze.rows + 2)
+        // Progression alternative : +1x1 pour les 5 premiers niveaux, puis +2x2
+        let increase = levelsCompleted < 5 ? 1 : 2
+        let newCols = min(maxSize, maze.cols + increase)
+        let newRows = min(maxSize, maze.rows + increase)
         
         maze = Maze(cols: newCols, rows: newRows, seed: nil)
         setupItemForCurrentLevel()

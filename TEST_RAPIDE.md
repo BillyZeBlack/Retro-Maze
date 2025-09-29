@@ -19,8 +19,10 @@
    - ✅ **Bouton "Réinitialiser Premium"** doit remplacer "Pack Premium"
 
 ### **Étape 2 : Tester la Solution Premium**
-1. **Jouer normalement** jusqu'à ce que le temps s'écoule
-2. **Observer après échec** :
+1. **Observer le temps alloué** :
+   - ✅ **+15 secondes** ajoutées au temps total (visible dans le compteur)
+2. **Jouer normalement** jusqu'à ce que le temps s'écoule
+3. **Observer après échec** :
    - ✅ **Solution affichée automatiquement** pendant 15 secondes
    - ✅ **Indicateur "Solution: Xs"** avec compte à rebours
    - ✅ **Toggle "Solution" désactivé** pendant l'affichage
