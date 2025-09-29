@@ -9,6 +9,7 @@ import Foundation
 import Combine
 import SwiftUI
 
+@MainActor
 final class MazeViewModel: ObservableObject {
     // MARK: - Model
     @Published private(set) var maze: Maze = .init(cols: 5, rows: 5, seed: nil)
@@ -22,6 +23,18 @@ final class MazeViewModel: ObservableObject {
     @Published private(set) var itemCollected: Bool = false
     @Published private(set) var requiresItem: Bool = false
     @Published private(set) var levelsCompleted: Int = 0
+
+    // MARK: - Premium Features
+    @Published var hasPremiumPack: Bool = false {
+        didSet {
+            if hasPremiumPack {
+                UserDefaults.standard.set(true, forKey: "hasPremiumPack")
+            }
+        }
+    }
+    @Published private(set) var showSolutionAfterFailure: Bool = false
+    @Published private(set) var solutionTimer: Double = 0.0
+    private let solutionDuration: Double = 15.0
 
     // MARK: - Movement
     @Published var stepDuration: Double = 0.22
@@ -46,12 +59,14 @@ final class MazeViewModel: ObservableObject {
 
     // Services
     let tone = ModernToneEngine()
+    private let storeManager = StoreManager()
 
     // Tick
     private var ticker: AnyCancellable?
     private let tickInterval: Double = 0.1
 
     init() {
+        checkPremiumStatus()
         resetPlayer()
         recalcAndResetTimerForCurrentMaze(carry: 0)
         ticker = Timer.publish(every: tickInterval, on: .main, in: .common)
@@ -66,18 +81,55 @@ final class MazeViewModel: ObservableObject {
         if !isMoving { tryStartMovement() }
     }
 
+    // MARK: - Premium Features Management
+
+    func activatePremiumPack() {
+        Task {
+            let success = await storeManager.purchasePremiumPack()
+            if success {
+                hasPremiumPack = true
+                print("✅ Pack premium activé avec succès")
+            } else {
+                print("❌ Échec de l'activation du pack premium")
+            }
+        }
+    }
+
+    func checkPremiumStatus() {
+        if storeManager.hasPremiumPack || UserDefaults.standard.bool(forKey: "hasPremiumPack") {
+            hasPremiumPack = true
+        }
+    }
+
+    func showSolutionAfterTimeout() {
+        guard hasPremiumPack && !showSolutionAfterFailure else { return }
+        
+        showSolutionAfterFailure = true
+        solutionTimer = solutionDuration
+        showPath = true
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + solutionDuration) {
+            self.hideSolution()
+        }
+    }
+
+    private func hideSolution() {
+        showSolutionAfterFailure = false
+        solutionTimer = 0.0
+        showPath = false
+    }
+
     // MARK: - Item System
 
     private func setupItemForCurrentLevel() {
-        // Objet requis tous les 10 niveaux, à partir du niveau 11
-        // Niveaux 11-20, 21-30, 31-40, etc.
-        requiresItem = (levelsCompleted >= 10 && (levelsCompleted - 10) % 10 < 10)
+        let currentPalier = (levelsCompleted / 10) + 1
+        requiresItem = (currentPalier >= 2)
         
         if requiresItem {
             itemCollected = false
             _ = maze.placeItem()
         } else {
-            itemCollected = true // Pas d'objet requis
+            itemCollected = true
             maze.itemPosition = nil
         }
     }
@@ -85,7 +137,6 @@ final class MazeViewModel: ObservableObject {
     private func checkItemCollection() {
         if requiresItem && !itemCollected && maze.hasReachedItem(playerX: playerX, playerY: playerY) {
             itemCollected = true
-            // Son de collection d'objet
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 self.tone.successJingle()
             }
@@ -136,7 +187,6 @@ final class MazeViewModel: ObservableObject {
     private func movementStepLoop() {
         guard isMoving else { return }
 
-        // Vérifier la collection d'objet à chaque mouvement
         checkItemCollection()
 
         if let want = nextDesiredDirection(), canTurnNow(to: want) {
@@ -152,7 +202,6 @@ final class MazeViewModel: ObservableObject {
                 playerY += dir.dy
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + stepDuration) {
-                // Vérifier à nouveau après le mouvement
                 self.checkItemCollection()
                 if self.reachedGoal() {
                     self.handleSuccess()
@@ -178,7 +227,6 @@ final class MazeViewModel: ObservableObject {
 
     private func reachedGoal() -> Bool {
         let atGoal = playerX == maze.cols - 1 && playerY == 0
-        // Si objet requis, vérifier qu'il est collecté
         return atGoal && (!requiresItem || itemCollected)
     }
 
@@ -195,22 +243,20 @@ final class MazeViewModel: ObservableObject {
         timerRunning = true
     }
 
-    private func recalcAndResetTimerForCurrentMazePreservingProgress() {
-        let oldBudget = max(1, timeLeft + 0.0001)
-        let newBudget = timeBudgetForCurrentMaze(carry: 0)
-        let fractionLeft = min(1.0, max(0.0, timeLeft / oldBudget))
-        timeLeft = max(5, newBudget * fractionLeft)
-        timerRunning = true
-    }
-
     // MARK: - Tick
 
     private func tick() {
         guard timerRunning else { return }
+        
         if timeLeft > 0 {
             timeLeft = max(0, timeLeft - tickInterval)
             tone.updateUrgency(timeLeft: timeLeft)
         }
+        
+        if showSolutionAfterFailure {
+            solutionTimer = max(0, solutionTimer - tickInterval)
+        }
+        
         if timeLeft <= 0 {
             handleTimeout()
         }
@@ -220,13 +266,19 @@ final class MazeViewModel: ObservableObject {
 
     private func handleTimeout() {
         if reachedGoal() { handleSuccess(); return }
+        
         timerRunning = false
         isMoving = false
         currentDirection = nil
         tone.timeoutBuzz()
-        resetPlayer()
-        recalcAndResetTimerForCurrentMaze(carry: 0)
-        tone.updateUrgency(timeLeft: timeLeft)
+        
+        showSolutionAfterTimeout()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + (hasPremiumPack ? solutionDuration : 2.0)) {
+            self.resetPlayer()
+            self.recalcAndResetTimerForCurrentMaze(carry: 0)
+            self.tone.updateUrgency(timeLeft: self.timeLeft)
+        }
     }
 
     private func handleSuccess() {
@@ -234,9 +286,8 @@ final class MazeViewModel: ObservableObject {
         isMoving = false
         currentDirection = nil
 
-        // Vérifier la condition de victoire finale
         if requiresItem && !itemCollected {
-            return // Ne pas permettre la victoire sans l'objet
+            return
         }
 
         let carry = ceil(max(0, timeLeft) / 2.0)
@@ -244,7 +295,6 @@ final class MazeViewModel: ObservableObject {
 
         levelsCompleted += 1
 
-        // LIMITATION : Ne pas dépasser 27x27
         let maxSize = 27
         let newCols = min(maxSize, maze.cols + 2)
         let newRows = min(maxSize, maze.rows + 2)
@@ -267,6 +317,10 @@ final class MazeViewModel: ObservableObject {
         return String(format: "%.0f.%ds", secs, tenth)
     }
 
+    func formattedSolutionTime(_ t: Double) -> String {
+        return String(format: "%.0f", t)
+    }
+
     func resetPlayer() {
         playerX = 0
         playerY = maze.rows - 1
@@ -274,14 +328,26 @@ final class MazeViewModel: ObservableObject {
         currentDirection = nil
         intentQueue.removeAll()
         
-        // Réinitialiser l'objet si nécessaire
         if requiresItem {
             itemCollected = false
+        }
+        
+        if showSolutionAfterFailure {
+            hideSolution()
         }
     }
 
     // MARK: - Public getters pour la vue
     var itemPosition: (x: Int, y: Int)? {
         return maze.itemPosition
+    }
+    
+    // MARK: remise à zero premium
+    
+    func resetPremiumStatus() {
+        hasPremiumPack = false
+        UserDefaults.standard.set(false, forKey: "hasPremiumPack")
+        storeManager.resetPremiumForTesting()
+        print("✅ État premium réinitialisé")
     }
 }

@@ -25,14 +25,14 @@
 
 /* Begin PBXFileReference section */
 		9FE56F6D2E814D17008C4574 /* Retro Maze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Retro Maze.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9FE56F7B2E814D1A008C4574 /* Snail Maze like2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Snail Maze like2Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9FE56F852E814D1A008C4574 /* Snail Maze like2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Snail Maze like2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FE56F7B2E814D1A008C4574 /* Retro MazeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Retro MazeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FE56F852E814D1A008C4574 /* Retro MazeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Retro MazeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		9FE56F6F2E814D17008C4574 /* Snail Maze like2 */ = {
+		9FE56F6F2E814D17008C4574 /* Snail Maze Like2 */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Snail Maze like2";
+			path = "Snail Maze Like2";
 			sourceTree = "<group>";
 		};
 		9FE56F7E2E814D1A008C4574 /* Snail Maze like2Tests */ = {
@@ -75,7 +75,7 @@
 		9FE56F642E814D17008C4574 = {
 			isa = PBXGroup;
 			children = (
-				9FE56F6F2E814D17008C4574 /* Snail Maze like2 */,
+				9FE56F6F2E814D17008C4574 /* Snail Maze Like2 */,
 				9FE56F7E2E814D1A008C4574 /* Snail Maze like2Tests */,
 				9FE56F882E814D1A008C4574 /* Snail Maze like2UITests */,
 				9FE56F6E2E814D17008C4574 /* Products */,
@@ -86,8 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				9FE56F6D2E814D17008C4574 /* Retro Maze.app */,
-				9FE56F7B2E814D1A008C4574 /* Snail Maze like2Tests.xctest */,
-				9FE56F852E814D1A008C4574 /* Snail Maze like2UITests.xctest */,
+				9FE56F7B2E814D1A008C4574 /* Retro MazeTests.xctest */,
+				9FE56F852E814D1A008C4574 /* Retro MazeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,9 +95,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9FE56F6C2E814D17008C4574 /* Snail Maze like2 */ = {
+		9FE56F6C2E814D17008C4574 /* Retro Maze */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9FE56F8F2E814D1A008C4574 /* Build configuration list for PBXNativeTarget "Snail Maze like2" */;
+			buildConfigurationList = 9FE56F8F2E814D1A008C4574 /* Build configuration list for PBXNativeTarget "Retro Maze" */;
 			buildPhases = (
 				9FE56F692E814D17008C4574 /* Sources */,
 				9FE56F6A2E814D17008C4574 /* Frameworks */,
@@ -108,18 +108,18 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				9FE56F6F2E814D17008C4574 /* Snail Maze like2 */,
+				9FE56F6F2E814D17008C4574 /* Snail Maze Like2 */,
 			);
-			name = "Snail Maze like2";
+			name = "Retro Maze";
 			packageProductDependencies = (
 			);
 			productName = "Snail Maze like2";
 			productReference = 9FE56F6D2E814D17008C4574 /* Retro Maze.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9FE56F7A2E814D1A008C4574 /* Snail Maze like2Tests */ = {
+		9FE56F7A2E814D1A008C4574 /* Retro MazeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9FE56F922E814D1A008C4574 /* Build configuration list for PBXNativeTarget "Snail Maze like2Tests" */;
+			buildConfigurationList = 9FE56F922E814D1A008C4574 /* Build configuration list for PBXNativeTarget "Retro MazeTests" */;
 			buildPhases = (
 				9FE56F772E814D1A008C4574 /* Sources */,
 				9FE56F782E814D1A008C4574 /* Frameworks */,
@@ -133,16 +133,16 @@
 			fileSystemSynchronizedGroups = (
 				9FE56F7E2E814D1A008C4574 /* Snail Maze like2Tests */,
 			);
-			name = "Snail Maze like2Tests";
+			name = "Retro MazeTests";
 			packageProductDependencies = (
 			);
 			productName = "Snail Maze like2Tests";
-			productReference = 9FE56F7B2E814D1A008C4574 /* Snail Maze like2Tests.xctest */;
+			productReference = 9FE56F7B2E814D1A008C4574 /* Retro MazeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9FE56F842E814D1A008C4574 /* Snail Maze like2UITests */ = {
+		9FE56F842E814D1A008C4574 /* Retro MazeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9FE56F952E814D1A008C4574 /* Build configuration list for PBXNativeTarget "Snail Maze like2UITests" */;
+			buildConfigurationList = 9FE56F952E814D1A008C4574 /* Build configuration list for PBXNativeTarget "Retro MazeUITests" */;
 			buildPhases = (
 				9FE56F812E814D1A008C4574 /* Sources */,
 				9FE56F822E814D1A008C4574 /* Frameworks */,
@@ -156,11 +156,11 @@
 			fileSystemSynchronizedGroups = (
 				9FE56F882E814D1A008C4574 /* Snail Maze like2UITests */,
 			);
-			name = "Snail Maze like2UITests";
+			name = "Retro MazeUITests";
 			packageProductDependencies = (
 			);
 			productName = "Snail Maze like2UITests";
-			productReference = 9FE56F852E814D1A008C4574 /* Snail Maze like2UITests.xctest */;
+			productReference = 9FE56F852E814D1A008C4574 /* Retro MazeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -186,7 +186,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9FE56F682E814D17008C4574 /* Build configuration list for PBXProject "Snail Maze like2" */;
+			buildConfigurationList = 9FE56F682E814D17008C4574 /* Build configuration list for PBXProject "Retro Maze" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -200,9 +200,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9FE56F6C2E814D17008C4574 /* Snail Maze like2 */,
-				9FE56F7A2E814D1A008C4574 /* Snail Maze like2Tests */,
-				9FE56F842E814D1A008C4574 /* Snail Maze like2UITests */,
+				9FE56F6C2E814D17008C4574 /* Retro Maze */,
+				9FE56F7A2E814D1A008C4574 /* Retro MazeTests */,
+				9FE56F842E814D1A008C4574 /* Retro MazeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -258,12 +258,12 @@
 /* Begin PBXTargetDependency section */
 		9FE56F7D2E814D1A008C4574 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9FE56F6C2E814D17008C4574 /* Snail Maze like2 */;
+			target = 9FE56F6C2E814D17008C4574 /* Retro Maze */;
 			targetProxy = 9FE56F7C2E814D1A008C4574 /* PBXContainerItemProxy */;
 		};
 		9FE56F872E814D1A008C4574 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9FE56F6C2E814D17008C4574 /* Snail Maze like2 */;
+			target = 9FE56F6C2E814D17008C4574 /* Retro Maze */;
 			targetProxy = 9FE56F862E814D1A008C4574 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -481,7 +481,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Snail Maze like2.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Snail Maze like2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Retro Maze.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Retro Maze";
 				XROS_DEPLOYMENT_TARGET = 2.5;
 			};
 			name = Debug;
@@ -504,7 +504,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Snail Maze like2.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Snail Maze like2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Retro Maze.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Retro Maze";
 				XROS_DEPLOYMENT_TARGET = 2.5;
 			};
 			name = Release;
@@ -556,7 +556,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9FE56F682E814D17008C4574 /* Build configuration list for PBXProject "Snail Maze like2" */ = {
+		9FE56F682E814D17008C4574 /* Build configuration list for PBXProject "Retro Maze" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9FE56F8D2E814D1A008C4574 /* Debug */,
@@ -565,7 +565,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9FE56F8F2E814D1A008C4574 /* Build configuration list for PBXNativeTarget "Snail Maze like2" */ = {
+		9FE56F8F2E814D1A008C4574 /* Build configuration list for PBXNativeTarget "Retro Maze" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9FE56F902E814D1A008C4574 /* Debug */,
@@ -574,7 +574,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9FE56F922E814D1A008C4574 /* Build configuration list for PBXNativeTarget "Snail Maze like2Tests" */ = {
+		9FE56F922E814D1A008C4574 /* Build configuration list for PBXNativeTarget "Retro MazeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9FE56F932E814D1A008C4574 /* Debug */,
@@ -583,7 +583,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9FE56F952E814D1A008C4574 /* Build configuration list for PBXNativeTarget "Snail Maze like2UITests" */ = {
+		9FE56F952E814D1A008C4574 /* Build configuration list for PBXNativeTarget "Retro MazeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9FE56F962E814D1A008C4574 /* Debug */,
