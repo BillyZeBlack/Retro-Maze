@@ -120,7 +120,7 @@ public struct Maze {
 
         while !frontier.isEmpty {
             let i = pickActiveIndex()
-            var opts = unvisitedNeighbors(i)
+            let opts = unvisitedNeighbors(i)
 
             if opts.isEmpty {
                 if let pos = frontier.firstIndex(of: i) { frontier.remove(at: pos) }

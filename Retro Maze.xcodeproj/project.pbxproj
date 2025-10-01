@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		9FE570DA2E8D15D1008C4574 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 9FE570D92E8D15D1008C4574 /* GoogleMobileAds */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		9FE56F7C2E814D1A008C4574 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		9FE56F6D2E814D17008C4574 /* Retro Maze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Retro Maze.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE56F7B2E814D1A008C4574 /* Retro MazeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Retro MazeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FE56F852E814D1A008C4574 /* Retro MazeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Retro MazeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FE570B12E8D07A1008C4574 /* Retro-Maze-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Retro-Maze-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -52,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FE570DA2E8D15D1008C4574 /* GoogleMobileAds in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,9 +81,11 @@
 		9FE56F642E814D17008C4574 = {
 			isa = PBXGroup;
 			children = (
+				9FE570B12E8D07A1008C4574 /* Retro-Maze-Info.plist */,
 				9FE56F6F2E814D17008C4574 /* Snail Maze Like2 */,
 				9FE56F7E2E814D1A008C4574 /* Snail Maze like2Tests */,
 				9FE56F882E814D1A008C4574 /* Snail Maze like2UITests */,
+				9FE570D82E8D15D1008C4574 /* Frameworks */,
 				9FE56F6E2E814D17008C4574 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +98,13 @@
 				9FE56F852E814D1A008C4574 /* Retro MazeUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9FE570D82E8D15D1008C4574 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +127,7 @@
 			);
 			name = "Retro Maze";
 			packageProductDependencies = (
+				9FE570D92E8D15D1008C4574 /* GoogleMobileAds */,
 			);
 			productName = "Snail Maze like2";
 			productReference = 9FE56F6D2E814D17008C4574 /* Retro Maze.app */;
@@ -195,6 +211,9 @@
 			);
 			mainGroup = 9FE56F642E814D17008C4574;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				9FE570B02E8D070D008C4574 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 9FE56F6E2E814D17008C4574 /* Products */;
 			projectDirPath = "";
@@ -397,6 +416,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Retro-Maze-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -436,6 +456,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Retro-Maze-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -593,6 +614,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9FE570B02E8D070D008C4574 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9FE570D92E8D15D1008C4574 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9FE570B02E8D070D008C4574 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9FE56F652E814D17008C4574 /* Project object */;
 }

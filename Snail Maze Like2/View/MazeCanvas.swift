@@ -248,7 +248,7 @@ struct MazeCanvas: View {
         let y = offY + CGFloat(itemPos.y) * cellSize + cellSize/2
         let size = cellSize * 0.6
         
-        var star = StarShape(points: 5, innerRatio: 0.4).path(in: CGRect(
+        let star = StarShape(points: 5, innerRatio: 0.4).path(in: CGRect(
             x: x - size/2,
             y: y - size/2,
             width: size,

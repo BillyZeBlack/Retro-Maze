@@ -5,6 +5,7 @@
 
 import SwiftUI
 import UIKit
+import GoogleMobileAds
 
 struct MazeView: View {
     @StateObject var vm = MazeViewModel()
@@ -30,7 +31,14 @@ struct MazeView: View {
         colorScheme == .dark ? .yellow : .orange
     }
     
+    init() {
+        // Start Google Mobile Ads
+        MobileAds.shared.start(completionHandler: nil)
+    }
+    
+    
     var body: some View {
+        controls
         VStack(spacing: 12) {
             header
             
@@ -99,7 +107,13 @@ struct MazeView: View {
                 premiumSolutionIndicator
             }
             
-            controls
+            //controls
+            VStack {
+                // TODO: : A remplacer avec le bon ID de banniere
+                AdBannerView(adUnitID: "ca-app-pub-3940256099942544/2435281174")
+                    .frame(height: 50)
+            }
+            .padding()
         }
         .padding()
         .background(backgroundColor)
