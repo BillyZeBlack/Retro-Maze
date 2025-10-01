@@ -8,6 +8,8 @@ import UIKit
 import GoogleMobileAds
 
 struct MazeView: View {
+    @State var interstitial: InterstitialAd?
+    
     @StateObject var vm = MazeViewModel()
     @Environment(\.colorScheme) var colorScheme
     
@@ -38,8 +40,11 @@ struct MazeView: View {
     
     
     var body: some View {
-        controls
+        //controls
         VStack(spacing: 12) {
+            HStack{
+                controls
+            }
             header
             
             GeometryReader { geo in
@@ -96,6 +101,7 @@ struct MazeView: View {
                                     vm.handleSwipe(dir)
                                 }
                         )
+                    
                 }
                 .frame(width: drawSide, height: drawSide)
                 .frame(maxWidth: .infinity, maxHeight: targetSide, alignment: .center)
@@ -109,7 +115,7 @@ struct MazeView: View {
             
             //controls
             VStack {
-                // TODO: : A remplacer avec le bon ID de banniere
+                // TODO: : A remplacer avec le bon ID de banniere : ca-app-pub-8777271534976494/7963981117
                 AdBannerView(adUnitID: "ca-app-pub-3940256099942544/2435281174")
                     .frame(height: 50)
             }
@@ -117,7 +123,16 @@ struct MazeView: View {
         }
         .padding()
         .background(backgroundColor)
-        .onAppear { vm.tone.updateUrgency(timeLeft: vm.timeLeft) }
+        .onAppear {
+            vm.tone.updateUrgency(timeLeft: vm.timeLeft)
+            loadInterstitialAd()
+            
+        }
+        .onChange(of: vm.levelsCompleted) { level in
+            if level > 0 && level % 5 == 0 {
+                showInterstitialIfAvailable()
+            }
+        }
     }
     
     // MARK: - Subviews
@@ -230,5 +245,24 @@ struct MazeView: View {
             
         }
         .padding(.horizontal)
+    }
+    // TODO: mettre le bon ID
+    func loadInterstitialAd() { //ca-app-pub-8777271534976494/7424392238 
+        let adUnitID = "ca-app-pub-3940256099942544/4411468910"
+        
+        let request = Request()
+        InterstitialAd.load(with: adUnitID, request: request) { (ad, error) in
+            if let error = error {
+                return
+            }
+            self.interstitial = ad
+        }
+    }
+    
+    private func showInterstitialIfAvailable() {
+        if let interstitial = interstitial {
+            let root = UIApplication.shared.windows.first?.rootViewController
+            interstitial.present(from: root!)
+        }
     }
 }
