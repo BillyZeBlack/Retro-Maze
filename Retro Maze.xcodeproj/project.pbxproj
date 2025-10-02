@@ -29,9 +29,22 @@
 		9FE56F852E814D1A008C4574 /* Snail Maze like2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Snail Maze like2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		9FE571B72E8E809E008C4574 /* Exceptions for "Snail Maze like2" folder in "Snail Maze like2" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Snail-Maze-like2-Info.plist",
+			);
+			target = 9FE56F6C2E814D17008C4574 /* Snail Maze like2 */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		9FE56F6F2E814D17008C4574 /* Snail Maze like2 */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				9FE571B72E8E809E008C4574 /* Exceptions for "Snail Maze like2" folder in "Snail Maze like2" target */,
+			);
 			path = "Snail Maze like2";
 			sourceTree = "<group>";
 		};
@@ -186,7 +199,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9FE56F682E814D17008C4574 /* Build configuration list for PBXProject "Snail Maze like2" */;
+			buildConfigurationList = 9FE56F682E814D17008C4574 /* Build configuration list for PBXProject "Retro Maze" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -397,6 +410,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Snail-Maze-like2-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -436,6 +450,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Snail-Maze-like2-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -556,7 +571,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9FE56F682E814D17008C4574 /* Build configuration list for PBXProject "Snail Maze like2" */ = {
+		9FE56F682E814D17008C4574 /* Build configuration list for PBXProject "Retro Maze" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9FE56F8D2E814D1A008C4574 /* Debug */,
