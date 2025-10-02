@@ -1,12 +1,16 @@
+//
 //  MazeView.swift
 //  Snail Maze like2
 //
 //  Created by Williams SAADI on 22/09/2025.
+//
 
 import SwiftUI
 import UIKit
 import GoogleMobileAds
 
+
+// TODO: retirer le toggle solution / retirer le bouton "premium" si activé
 struct MazeView: View {
     @State var interstitial: InterstitialAd?
     
@@ -113,13 +117,15 @@ struct MazeView: View {
                 premiumSolutionIndicator
             }
             
-            //controls
-            VStack {
-                // TODO: : A remplacer avec le bon ID de banniere : ca-app-pub-8777271534976494/7963981117
-                AdBannerView(adUnitID: "ca-app-pub-3940256099942544/2435281174")
-                    .frame(height: 50)
+            // Bannière conditionnelle (uniquement si pas premium)
+            if !vm.hasPremiumPack {
+                VStack {
+                    // TODO: : A remplacer avec le bon ID de banniere : ca-app-pub-8777271534976494/7963981117
+                    AdBannerView(adUnitID: "ca-app-pub-3940256099942544/2435281174")
+                        .frame(height: 50)
+                }
+                .padding()
             }
-            .padding()
         }
         .padding()
         .background(backgroundColor)
@@ -129,7 +135,8 @@ struct MazeView: View {
             
         }
         .onChange(of: vm.levelsCompleted) { level in
-            if level > 0 && level % 5 == 0 {
+            // Afficher l'interstitielle tous les 5 niveaux (uniquement si pas premium)
+            if !vm.hasPremiumPack && level > 0 && level % 5 == 0 {
                 showInterstitialIfAvailable()
             }
         }
