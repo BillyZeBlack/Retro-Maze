@@ -13,7 +13,7 @@ struct Snail_Maze_like2App: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     var body: some Scene {
         WindowGroup {
-            MazeView()
+            LaunchPage()
         }
     }
     
