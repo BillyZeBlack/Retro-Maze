@@ -1,0 +1,43 @@
+{
+  "identifier" : "7C7B0D76-4A07-4E29-ACF0-40B4D39248F5",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "APP_STORE_CONNECT_PRICE_PLACEHOLDER",
+      "familyShareable" : false,
+      "internalID" : "4F4AF97E-4C9E-49C9-86A4-A75932E8A4A7",
+      "localizations" : [
+        {
+          "description" : "APP_STORE_CONNECT_DESCRIPTION_EN_PLACEHOLDER",
+          "displayName" : "APP_STORE_CONNECT_DISPLAY_NAME_EN_PLACEHOLDER",
+          "locale" : "en_US"
+        },
+        {
+          "description" : "APP_STORE_CONNECT_DESCRIPTION_FR_PLACEHOLDER",
+          "displayName" : "APP_STORE_CONNECT_DISPLAY_NAME_FR_PLACEHOLDER",
+          "locale" : "fr_FR"
+        }
+      ],
+      "productID" : "APP_STORE_CONNECT_PRODUCT_ID_PLACEHOLDER",
+      "referenceName" : "APP_STORE_CONNECT_REFERENCE_NAME_PLACEHOLDER",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_applicationInternalID" : "2BE03594-D3BA-440F-8F97-FB3D96E4C520",
+    "_developerTeamID" : "APP_STORE_CONNECT_TEAM_ID_PLACEHOLDER",
+    "_lastSynchronizedDate" : 0,
+    "_locale" : "fr_FR",
+    "_storefront" : "FRA",
+    "_subscriptionGroupInternalID" : "00000000-0000-0000-0000-000000000000"
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}

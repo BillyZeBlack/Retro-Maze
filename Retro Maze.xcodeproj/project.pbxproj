@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		9FEAFBC72F97793A00E5ADF9 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 9FEAFBC62F97793A00E5ADF9 /* GoogleMobileAds */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		9FE56F7C2E814D1A008C4574 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,22 +33,9 @@
 		9FE56F852E814D1A008C4574 /* Snail Maze like2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Snail Maze like2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		9FE571B72E8E809E008C4574 /* Exceptions for "Snail Maze like2" folder in "Snail Maze like2" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"Snail-Maze-like2-Info.plist",
-			);
-			target = 9FE56F6C2E814D17008C4574 /* Snail Maze like2 */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		9FE56F6F2E814D17008C4574 /* Snail Maze like2 */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				9FE571B72E8E809E008C4574 /* Exceptions for "Snail Maze like2" folder in "Snail Maze like2" target */,
-			);
 			path = "Snail Maze like2";
 			sourceTree = "<group>";
 		};
@@ -65,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FEAFBC72F97793A00E5ADF9 /* GoogleMobileAds in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +117,7 @@
 			);
 			name = "Snail Maze like2";
 			packageProductDependencies = (
+				9FEAFBC62F97793A00E5ADF9 /* GoogleMobileAds */,
 			);
 			productName = "Snail Maze like2";
 			productReference = 9FE56F6D2E814D17008C4574 /* Retro Maze.app */;
@@ -208,6 +201,9 @@
 			);
 			mainGroup = 9FE56F642E814D17008C4574;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				9FEAFBC52F97793A00E5ADF9 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 9FE56F6E2E814D17008C4574 /* Products */;
 			projectDirPath = "";
@@ -410,7 +406,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Snail-Maze-like2-Info.plist";
+				INFOPLIST_FILE = "Retro-Maze-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -450,7 +446,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Snail-Maze-like2-Info.plist";
+				INFOPLIST_FILE = "Retro-Maze-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -608,6 +604,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9FEAFBC52F97793A00E5ADF9 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 13.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9FEAFBC62F97793A00E5ADF9 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9FEAFBC52F97793A00E5ADF9 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9FE56F652E814D17008C4574 /* Project object */;
 }

@@ -11,9 +11,11 @@ import GoogleMobileAds
 @main
 struct Snail_Maze_like2App: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    @StateObject private var premiumManager = PremiumManager()
+
     var body: some Scene {
         WindowGroup {
-            LaunchPage()
+            LaunchPage(premiumManager: premiumManager)
         }
     }
     

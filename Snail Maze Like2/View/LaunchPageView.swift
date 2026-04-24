@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct LaunchPage: View {
+    let premiumManager: PremiumManager
     @State var timerFinish = false
     
     var body: some View {
         VStack(spacing: 25) {
             if timerFinish {
                 withAnimation {
-                    MazeView()
+                    MazeView(premiumManager: premiumManager)
                 }.transition(.slide)
                 
             } else {
@@ -40,6 +41,6 @@ struct LaunchPage: View {
 
 struct launchPage_Previews: PreviewProvider {
     static var previews: some View {
-        LaunchPage()
+        LaunchPage(premiumManager: PremiumManager())
     }
 }

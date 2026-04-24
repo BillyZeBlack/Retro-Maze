@@ -1,0 +1,23 @@
+{
+  "/Users/wills/Downloads/Retro Maze/Snail Maze like2/View/ItemView.swift" : {
+    "const-values" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/ItemView.swiftconstvalues",
+    "dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/ItemView.d",
+    "diagnostics" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/ItemView.dia",
+    "object" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/ItemView.o",
+    "swift-dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/ItemView.swiftdeps"
+  },
+  "/Users/wills/Downloads/Retro Maze/Snail Maze like2/View/LaunchPageView.swift" : {
+    "const-values" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/LaunchPageView.swiftconstvalues",
+    "dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/LaunchPageView.d",
+    "diagnostics" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/LaunchPageView.dia",
+    "object" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/LaunchPageView.o",
+    "swift-dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/LaunchPageView.swiftdeps"
+  },
+  "/Users/wills/Downloads/Retro Maze/Snail Maze like2/View/MazeCanvas.swift" : {
+    "const-values" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeCanvas.swiftconstvalues",
+    "dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeCanvas.d",
+    "diagnostics" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeCanvas.dia",
+    "object" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeCanvas.o",
+    "swift-dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeCanvas.swiftdeps"
+  }
+}

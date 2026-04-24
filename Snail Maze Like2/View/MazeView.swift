@@ -10,11 +10,13 @@ import UIKit
 import GoogleMobileAds
 
 
-// TODO: retirer le toggle solution / retirer le bouton "premium" si activé
 struct MazeView: View {
+    let premiumManager: PremiumManager
+
     @State var interstitial: InterstitialAd?
-    
-    @StateObject var vm = MazeViewModel()
+    @State private var isShowingPremiumSheet = false
+
+    @StateObject private var vm: MazeViewModel
     @Environment(\.colorScheme) var colorScheme
     
     private let padding: CGFloat = 12
@@ -37,8 +39,9 @@ struct MazeView: View {
         colorScheme == .dark ? .yellow : .orange
     }
     
-    init() {
-        // Start Google Mobile Ads
+    init(premiumManager: PremiumManager) {
+        self.premiumManager = premiumManager
+        _vm = StateObject(wrappedValue: MazeViewModel(premiumManager: premiumManager))
         MobileAds.shared.start(completionHandler: nil)
     }
     
@@ -118,9 +121,8 @@ struct MazeView: View {
             }
             
             // Bannière conditionnelle (uniquement si pas premium)
-            if !vm.hasPremiumPack {
+            if premiumManager.hasLoadedEntitlements && !vm.hasPremiumPack {
                 VStack {
-                    // TODO: : A remplacer avec le bon ID de banniere : ca-app-pub-8777271534976494/7963981117
                     AdBannerView(adUnitID: "ca-app-pub-3940256099942544/2435281174")
                         .frame(height: 50)
                 }
@@ -132,13 +134,20 @@ struct MazeView: View {
         .onAppear {
             vm.tone.updateUrgency(timeLeft: vm.timeLeft)
             loadInterstitialAd()
-            
+        }
+        .onChange(of: premiumManager.hasLoadedEntitlements) { _ in
+            loadInterstitialAd()
+        }
+        .onChange(of: vm.hasPremiumPack) { _ in
+            loadInterstitialAd()
         }
         .onChange(of: vm.levelsCompleted) { level in
-            // Afficher l'interstitielle tous les 5 niveaux (uniquement si pas premium)
             if !vm.hasPremiumPack && level > 0 && level % 5 == 0 {
                 showInterstitialIfAvailable()
             }
+        }
+        .sheet(isPresented: $isShowingPremiumSheet) {
+            PremiumSheetView(premiumManager: premiumManager)
         }
     }
     
@@ -217,46 +226,35 @@ struct MazeView: View {
         HStack(spacing: 16) {
             Toggle("Solution", isOn: $vm.showPath)
                 .toggleStyle(SwitchToggleStyle(tint: colorScheme == .dark ? .orange : .blue))
-                .disabled(vm.showSolutionAfterFailure) // Désactivé pendant l'affichage premium
-            
-            // Bouton d'achat premium (optionnel)
-            if !vm.hasPremiumPack {
-                Button("Pack Premium") {
-                    // Ici vous intégrerez StoreKit
-                    vm.activatePremiumPack()
-                }
-                .foregroundColor(.white)
-                .padding(.horizontal, 12)
-                .padding(.vertical, 8)
-                .background(LinearGradient(
-                    gradient: Gradient(colors: [.yellow, .orange]),
-                    startPoint: .leading,
-                    endPoint: .trailing
-                ))
-                .cornerRadius(8)
-            } else {
-                Button("Réinitialiser Premium") {
-                    vm.resetPremiumStatus()
-                }
-                .foregroundColor(.red)
-                .padding(.horizontal, 12)
-                .padding(.vertical, 8)
-                .background(Color.red.opacity(0.1))
-                .cornerRadius(8)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 8)
-                        .stroke(Color.red, lineWidth: 1)
-                )
+                .disabled(vm.showSolutionAfterFailure)
+
+            Button {
+                isShowingPremiumSheet = true
+            } label: {
+                Label(vm.hasPremiumPack ? "Premium actif" : "Pack Premium", systemImage: vm.hasPremiumPack ? "crown.fill" : "crown")
+                    .foregroundColor(.white)
+                    .padding(.horizontal, 12)
+                    .padding(.vertical, 8)
+                    .background(
+                        LinearGradient(
+                            gradient: Gradient(colors: [.yellow, .orange]),
+                            startPoint: .leading,
+                            endPoint: .trailing
+                        )
+                    )
+                    .cornerRadius(8)
             }
-            
-            
         }
         .padding(.horizontal)
     }
-    // TODO: mettre le bon ID
-    func loadInterstitialAd() { //ca-app-pub-8777271534976494/7424392238 
+
+    func loadInterstitialAd() {
+        guard premiumManager.hasLoadedEntitlements, !vm.hasPremiumPack else {
+            interstitial = nil
+            return
+        }
+
         let adUnitID = "ca-app-pub-3940256099942544/4411468910"
-        
         let request = Request()
         InterstitialAd.load(with: adUnitID, request: request) { (ad, error) in
             if let error = error {
@@ -267,6 +265,8 @@ struct MazeView: View {
     }
     
     private func showInterstitialIfAvailable() {
+        guard !vm.hasPremiumPack else { return }
+
         if let interstitial = interstitial {
             let root = UIApplication.shared.windows.first?.rootViewController
             interstitial.present(from: root!)

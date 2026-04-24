@@ -1,0 +1,209 @@
+{
+  "" : {
+    "diagnostics" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/Snail Maze like2-primary.dia",
+    "emit-module-dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/Snail Maze like2-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/Snail Maze like2-primary-emit-module.dia",
+    "pch" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/Snail Maze like2-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/Snail Maze like2-primary.swiftdeps"
+  },
+  "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "const-values" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftconstvalues",
+    "dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/GeneratedAssetSymbols.d",
+    "diagnostics" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/GeneratedAssetSymbols.dia",
+    "index-unit-output-path" : "/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "swift-dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/GeneratedAssetSymbols.swiftdeps",
+    "swiftmodule" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/GeneratedAssetSymbols~partial.swiftmodule"
+  },
+  "/Users/wills/Downloads/Retro Maze/Snail Maze like2/Model/AdInterstitialManager.swift" : {
+    "const-values" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/AdInterstitialManager.swiftconstvalues",
+    "dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/AdInterstitialManager.d",
+    "diagnostics" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/AdInterstitialManager.dia",
+    "index-unit-output-path" : "/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/AdInterstitialManager.o",
+    "llvm-bc" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/AdInterstitialManager.bc",
+    "object" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/AdInterstitialManager.o",
+    "swift-dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/AdInterstitialManager.swiftdeps",
+    "swiftmodule" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/AdInterstitialManager~partial.swiftmodule"
+  },
+  "/Users/wills/Downloads/Retro Maze/Snail Maze like2/Model/Direction.swift" : {
+    "const-values" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/Direction.swiftconstvalues",
+    "dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/Direction.d",
+    "diagnostics" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/Direction.dia",
+    "index-unit-output-path" : "/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/Direction.o",
+    "llvm-bc" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/Direction.bc",
+    "object" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/Direction.o",
+    "swift-dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/Direction.swiftdeps",
+    "swiftmodule" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/Direction~partial.swiftmodule"
+  },
+  "/Users/wills/Downloads/Retro Maze/Snail Maze like2/Model/GameDifficulty.swift" : {
+    "const-values" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/GameDifficulty.swiftconstvalues",
+    "dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/GameDifficulty.d",
+    "diagnostics" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/GameDifficulty.dia",
+    "index-unit-output-path" : "/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/GameDifficulty.o",
+    "llvm-bc" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/GameDifficulty.bc",
+    "object" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/GameDifficulty.o",
+    "swift-dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/GameDifficulty.swiftdeps",
+    "swiftmodule" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/GameDifficulty~partial.swiftmodule"
+  },
+  "/Users/wills/Downloads/Retro Maze/Snail Maze like2/Model/Maze.swift" : {
+    "const-values" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/Maze.swiftconstvalues",
+    "dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/Maze.d",
+    "diagnostics" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/Maze.dia",
+    "index-unit-output-path" : "/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/Maze.o",
+    "llvm-bc" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/Maze.bc",
+    "object" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/Maze.o",
+    "swift-dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/Maze.swiftdeps",
+    "swiftmodule" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/Maze~partial.swiftmodule"
+  },
+  "/Users/wills/Downloads/Retro Maze/Snail Maze like2/Model/MazeCell.swift" : {
+    "const-values" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeCell.swiftconstvalues",
+    "dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeCell.d",
+    "diagnostics" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeCell.dia",
+    "index-unit-output-path" : "/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeCell.o",
+    "llvm-bc" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeCell.bc",
+    "object" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeCell.o",
+    "swift-dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeCell.swiftdeps",
+    "swiftmodule" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeCell~partial.swiftmodule"
+  },
+  "/Users/wills/Downloads/Retro Maze/Snail Maze like2/Model/PremiumManager.swift" : {
+    "const-values" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/PremiumManager.swiftconstvalues",
+    "dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/PremiumManager.d",
+    "diagnostics" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/PremiumManager.dia",
+    "index-unit-output-path" : "/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/PremiumManager.o",
+    "llvm-bc" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/PremiumManager.bc",
+    "object" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/PremiumManager.o",
+    "swift-dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/PremiumManager.swiftdeps",
+    "swiftmodule" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/PremiumManager~partial.swiftmodule"
+  },
+  "/Users/wills/Downloads/Retro Maze/Snail Maze like2/Model/RandomNumberGeneratorWithSeed.swift" : {
+    "const-values" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/RandomNumberGeneratorWithSeed.swiftconstvalues",
+    "dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/RandomNumberGeneratorWithSeed.d",
+    "diagnostics" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/RandomNumberGeneratorWithSeed.dia",
+    "index-unit-output-path" : "/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/RandomNumberGeneratorWithSeed.o",
+    "llvm-bc" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/RandomNumberGeneratorWithSeed.bc",
+    "object" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/RandomNumberGeneratorWithSeed.o",
+    "swift-dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/RandomNumberGeneratorWithSeed.swiftdeps",
+    "swiftmodule" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/RandomNumberGeneratorWithSeed~partial.swiftmodule"
+  },
+  "/Users/wills/Downloads/Retro Maze/Snail Maze like2/Snail_Maze_like2App.swift" : {
+    "const-values" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/Snail_Maze_like2App.swiftconstvalues",
+    "dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/Snail_Maze_like2App.d",
+    "diagnostics" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/Snail_Maze_like2App.dia",
+    "index-unit-output-path" : "/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/Snail_Maze_like2App.o",
+    "llvm-bc" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/Snail_Maze_like2App.bc",
+    "object" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/Snail_Maze_like2App.o",
+    "swift-dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/Snail_Maze_like2App.swiftdeps",
+    "swiftmodule" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/Snail_Maze_like2App~partial.swiftmodule"
+  },
+  "/Users/wills/Downloads/Retro Maze/Snail Maze like2/View/AdBannerView.swift" : {
+    "const-values" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/AdBannerView.swiftconstvalues",
+    "dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/AdBannerView.d",
+    "diagnostics" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/AdBannerView.dia",
+    "index-unit-output-path" : "/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/AdBannerView.o",
+    "llvm-bc" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/AdBannerView.bc",
+    "object" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/AdBannerView.o",
+    "swift-dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/AdBannerView.swiftdeps",
+    "swiftmodule" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/AdBannerView~partial.swiftmodule"
+  },
+  "/Users/wills/Downloads/Retro Maze/Snail Maze like2/View/AdInterstitialView.swift" : {
+    "const-values" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/AdInterstitialView.swiftconstvalues",
+    "dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/AdInterstitialView.d",
+    "diagnostics" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/AdInterstitialView.dia",
+    "index-unit-output-path" : "/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/AdInterstitialView.o",
+    "llvm-bc" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/AdInterstitialView.bc",
+    "object" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/AdInterstitialView.o",
+    "swift-dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/AdInterstitialView.swiftdeps",
+    "swiftmodule" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/AdInterstitialView~partial.swiftmodule"
+  },
+  "/Users/wills/Downloads/Retro Maze/Snail Maze like2/View/ItemView.swift" : {
+    "const-values" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/ItemView.swiftconstvalues",
+    "dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/ItemView.d",
+    "diagnostics" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/ItemView.dia",
+    "index-unit-output-path" : "/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/ItemView.o",
+    "llvm-bc" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/ItemView.bc",
+    "object" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/ItemView.o",
+    "swift-dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/ItemView.swiftdeps",
+    "swiftmodule" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/ItemView~partial.swiftmodule"
+  },
+  "/Users/wills/Downloads/Retro Maze/Snail Maze like2/View/LaunchPageView.swift" : {
+    "const-values" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/LaunchPageView.swiftconstvalues",
+    "dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/LaunchPageView.d",
+    "diagnostics" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/LaunchPageView.dia",
+    "index-unit-output-path" : "/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/LaunchPageView.o",
+    "llvm-bc" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/LaunchPageView.bc",
+    "object" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/LaunchPageView.o",
+    "swift-dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/LaunchPageView.swiftdeps",
+    "swiftmodule" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/LaunchPageView~partial.swiftmodule"
+  },
+  "/Users/wills/Downloads/Retro Maze/Snail Maze like2/View/MazeCanvas.swift" : {
+    "const-values" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeCanvas.swiftconstvalues",
+    "dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeCanvas.d",
+    "diagnostics" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeCanvas.dia",
+    "index-unit-output-path" : "/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeCanvas.o",
+    "llvm-bc" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeCanvas.bc",
+    "object" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeCanvas.o",
+    "swift-dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeCanvas.swiftdeps",
+    "swiftmodule" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeCanvas~partial.swiftmodule"
+  },
+  "/Users/wills/Downloads/Retro Maze/Snail Maze like2/View/MazeView.swift" : {
+    "const-values" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeView.swiftconstvalues",
+    "dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeView.d",
+    "diagnostics" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeView.dia",
+    "index-unit-output-path" : "/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeView.o",
+    "llvm-bc" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeView.bc",
+    "object" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeView.o",
+    "swift-dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeView.swiftdeps",
+    "swiftmodule" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeView~partial.swiftmodule"
+  },
+  "/Users/wills/Downloads/Retro Maze/Snail Maze like2/View/PlayerBall.swift" : {
+    "const-values" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/PlayerBall.swiftconstvalues",
+    "dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/PlayerBall.d",
+    "diagnostics" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/PlayerBall.dia",
+    "index-unit-output-path" : "/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/PlayerBall.o",
+    "llvm-bc" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/PlayerBall.bc",
+    "object" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/PlayerBall.o",
+    "swift-dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/PlayerBall.swiftdeps",
+    "swiftmodule" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/PlayerBall~partial.swiftmodule"
+  },
+  "/Users/wills/Downloads/Retro Maze/Snail Maze like2/View/PremiumSheetView.swift" : {
+    "const-values" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/PremiumSheetView.swiftconstvalues",
+    "dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/PremiumSheetView.d",
+    "diagnostics" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/PremiumSheetView.dia",
+    "index-unit-output-path" : "/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/PremiumSheetView.o",
+    "llvm-bc" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/PremiumSheetView.bc",
+    "object" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/PremiumSheetView.o",
+    "swift-dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/PremiumSheetView.swiftdeps",
+    "swiftmodule" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/PremiumSheetView~partial.swiftmodule"
+  },
+  "/Users/wills/Downloads/Retro Maze/Snail Maze like2/View/TextShimmer.swift" : {
+    "const-values" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/TextShimmer.swiftconstvalues",
+    "dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/TextShimmer.d",
+    "diagnostics" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/TextShimmer.dia",
+    "index-unit-output-path" : "/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/TextShimmer.o",
+    "llvm-bc" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/TextShimmer.bc",
+    "object" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/TextShimmer.o",
+    "swift-dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/TextShimmer.swiftdeps",
+    "swiftmodule" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/TextShimmer~partial.swiftmodule"
+  },
+  "/Users/wills/Downloads/Retro Maze/Snail Maze like2/ViewModel/MazeViewModel.swift" : {
+    "const-values" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeViewModel.swiftconstvalues",
+    "dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeViewModel.d",
+    "diagnostics" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeViewModel.dia",
+    "index-unit-output-path" : "/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeViewModel.o",
+    "llvm-bc" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeViewModel.bc",
+    "object" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeViewModel.o",
+    "swift-dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeViewModel.swiftdeps",
+    "swiftmodule" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/MazeViewModel~partial.swiftmodule"
+  },
+  "/Users/wills/Downloads/Retro Maze/Snail Maze like2/ViewModel/ModernToneEngine.swift" : {
+    "const-values" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/ModernToneEngine.swiftconstvalues",
+    "dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/ModernToneEngine.d",
+    "diagnostics" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/ModernToneEngine.dia",
+    "index-unit-output-path" : "/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/ModernToneEngine.o",
+    "llvm-bc" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/ModernToneEngine.bc",
+    "object" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/ModernToneEngine.o",
+    "swift-dependencies" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/ModernToneEngine.swiftdeps",
+    "swiftmodule" : "/Users/wills/Downloads/Retro Maze/.derivedData/Build/Intermediates.noindex/Retro Maze.build/Debug-iphoneos/Snail Maze like2.build/Objects-normal/arm64/ModernToneEngine~partial.swiftmodule"
+  }
+}

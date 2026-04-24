@@ -25,13 +25,7 @@ final class MazeViewModel: ObservableObject {
     @Published private(set) var levelsCompleted: Int = 0
 
     // MARK: - Premium Features
-    @Published var hasPremiumPack: Bool = false {
-        didSet {
-            if hasPremiumPack {
-                UserDefaults.standard.set(true, forKey: "hasPremiumPack")
-            }
-        }
-    }
+    @Published private(set) var hasPremiumPack: Bool = false
     @Published private(set) var showSolutionAfterFailure: Bool = false
     @Published private(set) var solutionTimer: Double = 0.0
     private let solutionDuration: Double = 15.0
@@ -59,19 +53,30 @@ final class MazeViewModel: ObservableObject {
 
     // Services
     let tone = ModernToneEngine()
-    private let storeManager = StoreManager()
+    private let premiumManager: PremiumManager
 
     // Tick
     private var ticker: AnyCancellable?
+    private var cancellables = Set<AnyCancellable>()
     private let tickInterval: Double = 0.1
 
-    init() {
-        checkPremiumStatus()
+    init(premiumManager: PremiumManager) {
+        self.premiumManager = premiumManager
+        self.hasPremiumPack = premiumManager.hasPremiumAccess
+
         resetPlayer()
         recalcAndResetTimerForCurrentMaze(carry: 0)
         ticker = Timer.publish(every: tickInterval, on: .main, in: .common)
             .autoconnect()
             .sink { [weak self] _ in self?.tick() }
+
+        premiumManager.$hasPremiumAccess
+            .removeDuplicates()
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] hasPremium in
+                self?.applyPremiumStatus(hasPremium)
+            }
+            .store(in: &cancellables)
     }
 
     // MARK: - Public API
@@ -82,24 +87,6 @@ final class MazeViewModel: ObservableObject {
     }
 
     // MARK: - Premium Features Management
-
-    func activatePremiumPack() {
-        Task {
-            let success = await storeManager.purchasePremiumPack()
-            if success {
-                hasPremiumPack = true
-                print("✅ Pack premium activé avec succès")
-            } else {
-                print("❌ Échec de l'activation du pack premium")
-            }
-        }
-    }
-
-    func checkPremiumStatus() {
-        if storeManager.hasPremiumPack || UserDefaults.standard.bool(forKey: "hasPremiumPack") {
-            hasPremiumPack = true
-        }
-    }
 
     func showSolutionAfterTimeout() {
         guard hasPremiumPack && !showSolutionAfterFailure else { return }
@@ -344,13 +331,19 @@ final class MazeViewModel: ObservableObject {
     var itemPosition: (x: Int, y: Int)? {
         return maze.itemPosition
     }
-    
-    // MARK: remise à zero premium
-    
-    func resetPremiumStatus() {
-        hasPremiumPack = false
-        UserDefaults.standard.set(false, forKey: "hasPremiumPack")
-        storeManager.resetPremiumForTesting()
-        print("✅ État premium réinitialisé")
+
+    private func applyPremiumStatus(_ hasPremium: Bool) {
+        let previousValue = hasPremiumPack
+        hasPremiumPack = hasPremium
+
+        guard previousValue != hasPremium else { return }
+
+        if !hasPremium && showSolutionAfterFailure {
+            hideSolution()
+        }
+
+        let timeDelta = hasPremium ? 15.0 : -15.0
+        timeLeft = max(0, timeLeft + timeDelta)
+        tone.updateUrgency(timeLeft: timeLeft)
     }
 }
