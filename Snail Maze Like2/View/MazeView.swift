@@ -19,7 +19,6 @@ struct MazeView: View {
     @StateObject private var vm: MazeViewModel
     @Environment(\.colorScheme) var colorScheme
     
-    private let padding: CGFloat = 12
     private let targetSide: CGFloat = 360
     
     // Couleurs adaptatives
@@ -54,66 +53,21 @@ struct MazeView: View {
             }
             header
             
-            GeometryReader { geo in
-                let drawSide = min(targetSide, min(geo.size.width, geo.size.height))
-                let cols = CGFloat(vm.maze.cols)
-                let rows = CGFloat(vm.maze.rows)
-                
-                let availableSpace = drawSide - 2 * padding
-                let cell = min(availableSpace / cols, availableSpace / rows)
-                
-                let totalWidth = cols * cell
-                let totalHeight = rows * cell
-                let offX = (drawSide - totalWidth) / 2
-                let offY = (drawSide - totalHeight) / 2
-                
-                let lineW = max(1, cell * (vm.maze.cols <= 7 ? 0.25 : 0.15))
-                let ballD = max(6, cell - lineW * 1.8)
-                
-                ZStack {
-                    MazeCanvas(
-                        maze: vm.maze,
-                        drawSide: drawSide,
-                        padding: padding,
-                        showPath: vm.showPath || vm.showSolutionAfterFailure,
-                        itemPosition: vm.itemPosition,
-                        itemCollected: vm.itemCollected
-                    )
-                    
-                    PlayerBall(
-                        x: offX + CGFloat(vm.playerX) * cell + cell / 2,
-                        y: offY + CGFloat(vm.playerY) * cell + cell / 2,
-                        diameter: ballD
-                    )
-                    
-                    if let itemPos = vm.itemPosition, !vm.itemCollected {
-                        ItemView(
-                            x: offX + CGFloat(itemPos.x) * cell + cell / 2,
-                            y: offY + CGFloat(itemPos.y) * cell + cell / 2,
-                            size: ballD * 0.8
-                        )
-                    }
-                    
-                    Rectangle()
-                        .fill(.clear)
-                        .contentShape(Rectangle())
-                        .gesture(
-                            DragGesture(minimumDistance: 24)
-                                .onEnded { v in
-                                    let dx = v.translation.width
-                                    let dy = v.translation.height
-                                    let dir: Direction = (abs(dx) > abs(dy))
-                                    ? (dx > 0 ? .right : .left)
-                                    : (dy > 0 ? .down : .up)
-                                    vm.handleSwipe(dir)
-                                }
-                        )
-                    
-                }
-                .frame(width: drawSide, height: drawSide)
-                .frame(maxWidth: .infinity, maxHeight: targetSide, alignment: .center)
-            }
-            .frame(height: targetSide)
+            MazeSpriteBoard(
+                maze: vm.maze,
+                playerX: vm.playerX,
+                playerY: vm.playerY,
+                showPath: vm.showPath || vm.showSolutionAfterFailure,
+                itemPosition: vm.itemPosition,
+                itemCollected: vm.itemCollected,
+                stepDuration: vm.stepDuration,
+                isDarkMode: colorScheme == .dark,
+                onSwipe: vm.handleSwipe
+            )
+            .frame(width: targetSide, height: targetSide)
+            .frame(maxWidth: .infinity, alignment: .center)
+            .shadow(color: colorScheme == .dark ? .black.opacity(0.5) : .black.opacity(0.1),
+                    radius: 4, x: 2, y: 2)
             
             // Indicateur de solution premium
             if vm.showSolutionAfterFailure {
